@@ -17,8 +17,8 @@ import static com.hajder.lbm.PropertyReader.*;
  *         T |                 | H
  *           |                 | T
  *           ------------------- --->
- *                  u=v=0
- *                 BOTTOM           x
+ *                  u=v=0           x
+ *                 BOTTOM
  *
  * Along the y-axis i-pointer increases and along the x-axis increases j-pointer.
  * This determines described below base velocity vectors.
