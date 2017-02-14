@@ -1,7 +1,4 @@
-fileId = fopen('norm');
-arr = fscanf(fileId, '%f', [256, 256]);
-fclose(fileId);
-arr = arr';
+arr = csvread('norm.data');
 
 figure;
 contourf(arr);

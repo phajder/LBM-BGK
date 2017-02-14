@@ -7,10 +7,11 @@ import java.io.*;
  * @author Piotr Hajder
  */
 public class Main {
-    private static final String OUTPUT_NORM = "norm.data";
-    private static final String OUTPUT_U = "u.data";
-    private static final String OUTPUT_V = "v.data";
-    private static final String OUTPUT_RHO = "rho.data";
+    private static final String OUTPUT = "output/";
+    private static final String NORM = OUTPUT + "norm.data";
+    private static final String U = OUTPUT + "u.data";
+    private static final String V = OUTPUT + "v.data";
+    private static final String RHO = OUTPUT + "rho.data";
 
     public static void main(String[] args) {
         try {
@@ -24,10 +25,10 @@ public class Main {
                     matrix[i][j] = Math.sqrt(u[i][j] * u[i][j] + v[i][j] * v[i][j]);
                 }
             }
-            printData(matrix, OUTPUT_NORM);
-            printData(u, OUTPUT_U);
-            printData(v, OUTPUT_V);
-            printData(lbm.getRho(), OUTPUT_RHO);
+            printData(matrix, NORM);
+            printData(u, U);
+            printData(v, V);
+            printData(lbm.getRho(), RHO);
         } catch (IOException e) {
             System.err.println(e.getMessage());
             System.err.println("Error while reading property file. " +
@@ -43,9 +44,9 @@ public class Main {
         try {
             pw = new PrintWriter(new FileWriter(filename));
             for (double[] tab : matrix) {
-                for (double val : tab) {
-                    pw.print(val);
-                    pw.print(" ");
+                for(int i=0; i<tab.length; i++) {
+                    pw.print(tab[i]);
+                    if(i < tab.length - 1) pw.print(",");
                 }
                 pw.println();
             }

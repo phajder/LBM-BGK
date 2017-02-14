@@ -2,5 +2,6 @@
 .idea/vcs.xml
 .idea/workspace.xml
 out/
+output/
 *.asv
 *.data
