@@ -151,7 +151,7 @@ class LBM {
 
     /**
      * Calculates macroscopic parameters in lattice.
-     * Those parameters are:
+     * These parameters are:
      *  - density rho,
      *  - velocity u (directed towards x-axis),
      *  - velocity v (directed towards y-axis).

@@ -1,5 +1,4 @@
-arr = csvread('norm.data');
-
+arr = csvread('output/norm.data');
 figure;
 contourf(arr);
 colorbar;
