@@ -240,7 +240,7 @@ class LBM {
         double[][] previousU = new double[u.length][u[0].length];
         double norm;
         initialize();
-        for(int t = 0; t< maxStep; t++) {
+        for(int t = 0; t < maxStep; t++) {
             streamingStep();
             calculateMacroscopicParameters();
             calculateEquilibrium();
